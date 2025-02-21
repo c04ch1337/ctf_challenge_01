@@ -1,0 +1,2 @@
+flag{OWASP_XSS}
+Flag 5: Extracted via Cross-Site Scripting (XSS) in a comment section.
