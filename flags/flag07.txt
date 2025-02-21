@@ -1,0 +1,2 @@
+flag{OWASP_Insufficient_Log_&_Mon}
+Flag 7: Discovered by analyzing server logs (Insufficient Logging & Monitoring).
