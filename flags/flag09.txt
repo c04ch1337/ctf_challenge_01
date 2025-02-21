@@ -1,0 +1,2 @@
+flag{OWASP_CSRF}
+Flag 9: Discovered by exploiting a CSRF vulnerability.
