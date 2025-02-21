@@ -1,0 +1,2 @@
+flag{OWASP_File_upload}
+Flag 6: Found by exploiting a file upload vulnerability.
