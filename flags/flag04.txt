@@ -1,0 +1,2 @@
+flag{OWASP_Security_Misconfig}
+Flag 4: Found in a misconfigured directory (Security Misconfiguration).
