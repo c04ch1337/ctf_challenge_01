@@ -1,0 +1,2 @@
+flag{OWASP_SQL_Injection}
+Flag 2: Found by exploiting SQL Injection in the login form.
