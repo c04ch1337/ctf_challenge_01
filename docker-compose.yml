@@ -3,7 +3,7 @@ services:
   ctf_challenge:
     build: .
     ports:
-      - "80:80"
+      - "81:80"
     volumes:
       - ./flags:/var/www/html/flags
       - ./web_app:/var/www/html/dvwa
