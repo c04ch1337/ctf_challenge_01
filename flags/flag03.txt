@@ -1,0 +1,2 @@
+flag{OWASP_Broken_Auth}
+Flag 3: Discovered by bypassing authentication (Broken Authentication).
