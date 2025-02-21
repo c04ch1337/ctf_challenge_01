@@ -1,0 +1,2 @@
+flag{OWASP_Crypto_Failures}
+Flag 10: Found by decrypting sensitive data (Cryptographic Failures).
