@@ -1,0 +1,2 @@
+flag{OWASP_Insecure_Deserialization}
+Flag 8: Found by exploiting insecure deserialization.
