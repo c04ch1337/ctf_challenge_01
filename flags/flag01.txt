@@ -1,0 +1,2 @@
+flag{OWASP_Insecure_Design}
+Flag 1: Hidden in the HTML source of the login page (Insecure Design).
