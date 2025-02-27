@@ -1,4 +1,4 @@
-# CTF Challenge 3: The Phantom App
+# CTF Challenge 1: The Phantom App
 
 ## Story
 In a world where cybercrime reigns supreme, a notorious hacking group known as "The Phantoms" has created a vulnerable web application to test the skills of aspiring hackers. Your mission is to infiltrate this application, exploit its weaknesses, and retrieve 10 hidden flags. Each flag represents a piece of encrypted data that can expose the group's secrets and bring them to justice.
