@@ -1,9 +1,13 @@
 # Dockerfile
 FROM ubuntu:22.04
 
+# Set environment variables to avoid interactive prompts
+ENV DEBIAN_FRONTEND=noninteractive
+ENV TZ=UTC
+
 # Install dependencies
 RUN apt-get update && \
-    apt-get install -y apache2 php libapache2-mod-php curl && \
+    apt-get install -y apache2 php libapache2-mod-php curl tzdata && \
     apt-get clean
 
 # Copy web files
@@ -21,8 +25,8 @@ RUN chmod +x /usr/local/bin/setup_app.sh && \
 EXPOSE 80
 
 # Run setup scripts
-RUN /usr/local/bin/setup_app.sh && \
-    /usr/local/bin/setup_flags.sh
+RUN /usr/local/bin/setup-app.sh && \
+    /usr/local/bin/setup-flags.sh
 
 # Start Apache
 CMD ["apache2ctl", "-D", "FOREGROUND"]
