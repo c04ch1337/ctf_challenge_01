@@ -1,6 +1,14 @@
 #!/bin/bash
 
-# Define the base directory for the CTF Challenge 1 files
+# Check if the container name is provided
+if [[ -z "$1" ]]; then
+    echo "Usage: $0 <container_name>"
+    exit 1
+fi
+
+CONTAINER_NAME=$1
+
+# Define the base directory for the CTF Challenge files inside the container
 BASE_DIR="/var/www/html"
 
 # Define the expected flags and their locations
@@ -22,8 +30,10 @@ check_flag() {
     local expected_flag=$1
     local flag_location=$2
 
-    if [[ -f "$flag_location" ]]; then
-        local flag_content=$(cat "$flag_location")
+    # Check if the file exists in the container
+    if docker exec "$CONTAINER_NAME" test -f "$flag_location"; then
+        # Get the flag content from the container
+        local flag_content=$(docker exec "$CONTAINER_NAME" cat "$flag_location")
         if [[ "$flag_content" == "$expected_flag" ]]; then
             echo "[✓] Flag found and matches: $expected_flag (Location: $flag_location)"
         else
@@ -35,7 +45,7 @@ check_flag() {
 }
 
 # Check all flags
-echo "Checking flags for The Phantom App..."
+echo "Checking flags in container: $CONTAINER_NAME..."
 for flag in "${!FLAGS[@]}"; do
     check_flag "$flag" "${FLAGS[$flag]}"
 done
