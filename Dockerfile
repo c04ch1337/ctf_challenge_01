@@ -25,8 +25,8 @@ RUN chmod +x /usr/local/bin/setup_app.sh && \
 EXPOSE 80
 
 # Run setup scripts
-RUN /usr/local/bin/setup-app.sh && \
-    /usr/local/bin/setup-flags.sh
+RUN /usr/local/bin/setup_app.sh && \
+    /usr/local/bin/setup_flags.sh
 
 # Start Apache
 CMD ["apache2ctl", "-D", "FOREGROUND"]
