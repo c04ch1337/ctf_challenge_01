@@ -3,8 +3,7 @@ FROM ubuntu:22.04
 
 # Install dependencies
 RUN apt-get update && \
-    apt-get install -y apache2 php libapache2-mod-php curl && \
-    apt-get clean -y
+    apt-get install -y apache2 php libapache2-mod-php curl
 
 # Copy web files
 COPY web/ /var/www/html/
