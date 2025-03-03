@@ -8,3 +8,6 @@ Find all 10 flags hidden in the web application. Each flag is associated with a 
 
 ## How to Play
 Refer to the [How to Play](how_to_play.md) guide for instructions on participating in CTF challenges and the tools you can use.
+
+## Initial Artifact
+http://localhost:81
