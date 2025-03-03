@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Define the base directory for the CTF Challenge 3 files
+# Define the base directory for the CTF Challenge 1 files
 BASE_DIR="/var/www/html"
 
 # Define the expected flags and their locations
