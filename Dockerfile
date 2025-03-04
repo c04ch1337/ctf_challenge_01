@@ -13,6 +13,9 @@ RUN apt-get update && \
 # Copy web files
 COPY web/ /var/www/html/
 
+# Create Web Directories
+RUN mkdir /var/www/html/secret
+
 # Copy setup scripts
 COPY scripts/setup_app.sh /usr/local/bin/setup_app.sh
 COPY scripts/setup_flags.sh /usr/local/bin/setup_flags.sh
