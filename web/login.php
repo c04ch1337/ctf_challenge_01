@@ -1,6 +1,6 @@
 <?php
 if ($_POST['username'] === 'admin' && $_POST['password'] === 'password123') {
-    echo "<p>Flag 1: CTF{sql_injection}</p>";
+    echo "<p>Flag 1: CTF{flag1_sql_injection}</p>";
 } else {
     echo "<form method='post'>
         Username: <input type='text' name='username'><br>
