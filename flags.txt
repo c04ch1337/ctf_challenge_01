@@ -3,10 +3,10 @@ Flag	Hint
 CTF{flag1_sql_injection}	Exploit a SQL injection vulnerability in the login page.
 CTF{flag2_hidden_directory}	Find a hidden directory using directory brute-forcing.
 CTF{flag3_file_inclusion}	Exploit a file inclusion vulnerability in the search feature.
-CTF{base64_encoded}	Decode a base64-encoded string in the page source.
-CTF{weak_security_header}	Exploit a misconfigured security header.
-CTF{weak_password_hash}	Crack a weak password hash.
-CTF{command_injection}	Exploit a command injection vulnerability in the admin panel.
-CTF{response_header}	Find a flag hidden in the response headers.
-CTF{ssti_vulnerability}	Exploit a server-side template injection (SSTI) vulnerability.
-CTF{jwt_token}	Decode a JWT token to find the flag.
+CTF{flag4_base64_encoded}	Decode a base64-encoded string in the page source.
+CTF{flag5_weak_security_header}	Exploit a misconfigured security header.
+CTF{flag6_weak_password_hash}	Crack a weak password hash.
+CTF{flag7_command_injection}	Exploit a command injection vulnerability in the admin panel.
+CTF{flag8_response_header}	Find a flag hidden in the response headers.
+CTF{flag9_ssti_vulnerability}	Exploit a server-side template injection (SSTI) vulnerability.
+CTF{flag10_jwt_token}	Decode a JWT token to find the flag.
