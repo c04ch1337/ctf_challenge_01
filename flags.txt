@@ -1,8 +1,8 @@
 CTF Challenge 1: The Phantom App
 Flag	Hint
-CTF{sql_injection}	Exploit a SQL injection vulnerability in the login page.
-CTF{hidden_directory}	Find a hidden directory using directory brute-forcing.
-CTF{file_inclusion}	Exploit a file inclusion vulnerability in the search feature.
+CTF{flag1_sql_injection}	Exploit a SQL injection vulnerability in the login page.
+CTF{flag2_hidden_directory}	Find a hidden directory using directory brute-forcing.
+CTF{flag3_file_inclusion}	Exploit a file inclusion vulnerability in the search feature.
 CTF{base64_encoded}	Decode a base64-encoded string in the page source.
 CTF{weak_security_header}	Exploit a misconfigured security header.
 CTF{weak_password_hash}	Crack a weak password hash.
