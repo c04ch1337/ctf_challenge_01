@@ -22,7 +22,9 @@ COPY scripts/setup_flags.sh /usr/local/bin/setup_flags.sh
 
 # Set permissions
 RUN chmod +x /usr/local/bin/setup_app.sh && \
-    chmod +x /usr/local/bin/setup_flags.sh
+    chmod +x /usr/local/bin/setup_flags.sh && \
+    chmod 644 /var/www/html/debug.php && \
+    chown www-data:www-data /var/www/html/debug.php
 
 # Expose port 80
 EXPOSE 80
