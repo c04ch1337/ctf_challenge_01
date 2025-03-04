@@ -1,12 +1,12 @@
 Below is a step-by-step guide for obtaining all 10 flags in The Phantom App CTF Challenge. Each flag is associated with a specific vulnerability or challenge, and this guide provides detailed instructions for finding and exploiting these vulnerabilities to retrieve the flags.
 
 
-Flag 1: CTF{sql_injection}
+Flag 1: CTF{flag1_sql_injection}
 Location: /var/www/html/login.php
 Vulnerability: SQL Injection
 Steps:
 
-    Navigate to the login page: http://ctf_challenge_03.yourdomain.com/login.php.
+    Navigate to the login page: http://ctf_challenge_01.yourdomain.com/login.php.
 
     Enter a SQL injection payload in the username or password field:
 
@@ -16,9 +16,9 @@ Steps:
 
     Submit the form.
 
-    The application will log you in and display the flag: CTF{sql_injection}.
+    The application will log you in and display the flag: CTF{flag1_sql_injection}.
 
-Flag 2: CTF{hidden_directory}
+Flag 2: CTF{flag2_hidden_directory}
 Location: /var/www/html/secret/flag2.txt
 Vulnerability: Directory Traversal
 Steps:
@@ -27,37 +27,37 @@ Steps:
     bash
     Copy
 
-    gobuster dir -u http://ctf_challenge_03.yourdomain.com -w /path/to/wordlist.txt
+    gobuster dir -u http://ctf_challenge_01.yourdomain.com -w /path/to/wordlist.txt
 
     Look for a directory named secret.
 
-    Access the directory: http://ctf_challenge_03.yourdomain.com/secret/.
+    Access the directory: http://ctf_challenge_01.yourdomain.com/secret/.
 
-    Open the flag2.txt file to retrieve the flag: CTF{hidden_directory}.
+    Open the flag2.txt file to retrieve the flag: CTF{flag2_hidden_directory}.
 
-Flag 3: CTF{file_inclusion}
+Flag 3: CTF{flag3_file_inclusion}
 Location: /var/www/html/search.php
 Vulnerability: Local File Inclusion (LFI)
 Steps:
 
-    Navigate to the search page: http://ctf_challenge_03.yourdomain.com/search.php.
+    Navigate to the search page: http://ctf_challenge_01.yourdomain.com/search.php.
 
     Use the file parameter to include a local file:
 
-        Example: http://ctf_challenge_03.yourdomain.com/search.php?file=../../../../etc/passwd.
+        Example: http://ctf_challenge_01.yourdomain.com/search.php?file=../../../../etc/passwd.
 
     Experiment with different file paths to include the flag3.txt file:
 
         Example: http://ctf_challenge_03.yourdomain.com/search.php?file=flag3.txt.
 
-    The application will display the flag: CTF{file_inclusion}.
+    The application will display the flag: CTF{flag3_file_inclusion}.
 
-Flag 4: CTF{base64_encoded}
+Flag 4: CTF{flag4_base64_encoded}
 Location: /var/www/html/flag4.txt
 Vulnerability: Base64 Encoding
 Steps:
 
-    View the page source of the homepage: http://ctf_challenge_03.yourdomain.com.
+    View the page source of the homepage: http://ctf_challenge_01.yourdomain.com.
 
     Look for a base64-encoded string in the HTML comments or JavaScript.
 
@@ -67,9 +67,9 @@ Steps:
 
     echo "base64_encoded_string" | base64 --decode
 
-    The decoded string will contain the flag: CTF{base64_encoded}.
+    The decoded string will contain the flag: CTF{flag4_base64_encoded}.
 
-Flag 5: CTF{weak_security_header}
+Flag 5: CTF{flag5_weak_security_header}
 Location: /var/www/html/admin/panel.php
 Vulnerability: Misconfigured Security Headers
 Steps:
@@ -78,15 +78,15 @@ Steps:
     bash
     Copy
 
-    curl -I http://ctf_challenge_03.yourdomain.com/admin/panel.php
+    curl -I http://ctf_challenge_01.yourdomain.com/admin/panel.php
 
     Look for missing or weak security headers (e.g., Content-Security-Policy, X-Frame-Options).
 
     Exploit the misconfiguration to access the admin panel.
 
-    The flag will be displayed on the admin panel: CTF{weak_security_header}.
+    The flag will be displayed on the admin panel: CTF{flag5_weak_security_header}.
 
-Flag 6: CTF{weak_password_hash}
+Flag 6: CTF{flag6_weak_password_hash}
 Location: /var/www/html/flag6.txt
 Vulnerability: Weak Password Hash
 Steps:
@@ -101,14 +101,14 @@ Steps:
 
     Once the password is cracked, log in to the application.
 
-    Retrieve the flag from flag6.txt: CTF{weak_password_hash}.
+    Retrieve the flag from flag6.txt: CTF{flag6_weak_password_hash}.
 
-Flag 7: CTF{command_injection}
+Flag 7: CTF{flag7_command_injection}
 Location: /var/www/html/admin/panel.php
 Vulnerability: Command Injection
 Steps:
 
-    Navigate to the admin panel: http://ctf_challenge_03.yourdomain.com/admin/panel.php.
+    Navigate to the admin panel: http://ctf_challenge_01.yourdomain.com/admin/panel.php.
 
     Find a feature that executes system commands (e.g., a ping or traceroute tool).
 
@@ -116,9 +116,9 @@ Steps:
 
         Example: ; cat /var/www/html/flag7.txt.
 
-    The application will execute the command and display the flag: CTF{command_injection}.
+    The application will execute the command and display the flag: CTF{flag7_command_injection}.
 
-Flag 8: CTF{response_header}
+Flag 8: CTF{flag8_response_header}
 Location: /var/www/html/flag8.txt
 Vulnerability: Response Header Manipulation
 Steps:
@@ -127,13 +127,13 @@ Steps:
     bash
     Copy
 
-    curl -I http://ctf_challenge_03.yourdomain.com
+    curl -I http://ctf_challenge_01.yourdomain.com
 
-    Look for a custom header containing the flag (e.g., X-Flag: CTF{response_header}).
+    Look for a custom header containing the flag (e.g., X-Flag: CTF{flag8_response_header}).
 
-    Alternatively, access the flag8.txt file directly: http://ctf_challenge_03.yourdomain.com/flag8.txt.
+    Alternatively, access the flag8.txt file directly: http://ctf_challenge_01.yourdomain.com/flag8.txt.
 
-Flag 9: CTF{ssti_vulnerability}
+Flag 9: CTF{flag9_ssti_vulnerability}
 Location: /var/www/html/flag9.txt
 Vulnerability: Server-Side Template Injection (SSTI)
 Steps:
@@ -148,9 +148,9 @@ Steps:
 
         Example: {{ ''.__class__.__mro__[1].__subclasses__()[40]('/var/www/html/flag9.txt').read() }}.
 
-    The application will display the flag: CTF{ssti_vulnerability}.
+    The application will display the flag: CTF{flag9_ssti_vulnerability}.
 
-Flag 10: CTF{jwt_token}
+Flag 10: CTF{flag10_jwt_token}
 Location: /var/www/html/flag10.txt
 Vulnerability: JWT Token Manipulation
 Steps:
@@ -163,4 +163,4 @@ Steps:
 
     Use the modified token to access restricted areas of the application.
 
-    Retrieve the flag from flag10.txt: CTF{jwt_token}.
+    Retrieve the flag from flag10.txt: CTF{flag10_jwt_token}.
