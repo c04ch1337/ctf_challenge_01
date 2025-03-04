@@ -13,16 +13,16 @@ BASE_DIR="/var/www/html"
 
 # Define the expected flags and their locations
 declare -A FLAGS=(
-    ["CTF{sql_injection}"]="${BASE_DIR}/login.php"
-    ["CTF{hidden_directory}"]="${BASE_DIR}/secret/flag2.txt"
-    ["CTF{file_inclusion}"]="${BASE_DIR}/search.php"
-    ["CTF{base64_encoded}"]="${BASE_DIR}/flag4.txt"
-    ["CTF{weak_security_header}"]="${BASE_DIR}/admin/panel.php"
-    ["CTF{weak_password_hash}"]="${BASE_DIR}/flag6.txt"
-    ["CTF{command_injection}"]="${BASE_DIR}/admin/panel.php"
-    ["CTF{response_header}"]="${BASE_DIR}/flag8.txt"
-    ["CTF{ssti_vulnerability}"]="${BASE_DIR}/flag9.txt"
-    ["CTF{jwt_token}"]="${BASE_DIR}/flag10.txt"
+    ["CTF{flag1_sql_injection}"]="${BASE_DIR}/login.php"
+    ["CTF{flag2_hidden_directory}"]="${BASE_DIR}/secret/flag2.txt"
+    ["CTF{flag3_file_inclusion}"]="${BASE_DIR}/search.php"
+    ["CTF{flag4_base64_encoded}"]="${BASE_DIR}/flag4.txt"
+    ["CTF{flag5_weak_security_header}"]="${BASE_DIR}/admin/panel.php"
+    ["CTF{flag6_weak_password_hash}"]="${BASE_DIR}/flag6.txt"
+    ["CTF{flag7_command_injection}"]="${BASE_DIR}/admin/panel.php"
+    ["CTF{flag8_response_header}"]="${BASE_DIR}/flag8.txt"
+    ["CTF{flag9_ssti_vulnerability}"]="${BASE_DIR}/flag9.txt"
+    ["CTF{flag10_jwt_token}"]="${BASE_DIR}/flag10.txt"
 )
 
 # Function to check if a flag exists and matches the expected value
