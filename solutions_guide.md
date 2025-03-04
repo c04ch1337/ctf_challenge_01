@@ -1,4 +1,6 @@
 Below is a step-by-step guide for obtaining all 10 flags in The Phantom App CTF Challenge. Each flag is associated with a specific vulnerability or challenge, and this guide provides detailed instructions for finding and exploiting these vulnerabilities to retrieve the flags.
+
+
 Flag 1: CTF{sql_injection}
 Location: /var/www/html/login.php
 Vulnerability: SQL Injection
