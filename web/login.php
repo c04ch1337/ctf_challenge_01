@@ -7,22 +7,37 @@ $users = [
     ],
 ];
 
+// Simulated SQL database (for SQL Injection vulnerability)
+$sql_users = [
+    [
+        'username' => 'admin',
+        'password' => 'password123',
+        'flag' => 'CTF{flag1_sql_injection}',
+    ],
+];
+
 // Handle login form submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    // Check if the user exists
-    if (array_key_exists($username, $users)) {
-        // Verify the password hash
-        if (md5($password) === $users[$username]['password_hash']) {
-            // Login successful
-            echo "<p>Login successful! Flag 6: " . $users[$username]['flag'] . "</p>";
-        } else {
-            echo "<p>Invalid password.</p>";
-        }
+    // Check for SQL Injection payload
+    if (strpos($username, "' OR '1'='1") !== false || strpos($password, "' OR '1'='1") !== false) {
+        // SQL Injection successful
+        echo "<p>SQL Injection successful! Flag 1: " . $sql_users[0]['flag'] . "</p>";
     } else {
-        echo "<p>User not found.</p>";
+        // Normal login logic
+        if (array_key_exists($username, $users)) {
+            // Verify the password hash
+            if (md5($password) === $users[$username]['password_hash']) {
+                // Login successful
+                echo "<p>Login successful! Flag 6: " . $users[$username]['flag'] . "</p>";
+            } else {
+                echo "<p>Invalid password.</p>";
+            }
+        } else {
+            echo "<p>User not found.</p>";
+        }
     }
 }
 ?>
