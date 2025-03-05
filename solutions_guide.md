@@ -1,12 +1,13 @@
+# The Phantom App: Solutions Guide
 Solutions Guide for The Phantom App CTF Challenge. This guide provides step-by-step instructions for obtaining all 10 flags.
 
-The Phantom App: Solutions Guide
-
-Story
+### Story
 
 In a world where cybercrime reigns supreme, a notorious hacking group known as "The Phantoms" has created a vulnerable web application to test the skills of aspiring hackers. This application is hosted on the server ctf_challenge_03.yourdomain.com. Your mission is to infiltrate this server, exploit its weaknesses, and retrieve 10 hidden flags. Each flag represents a piece of encrypted data that can expose the group's secrets and bring them to justice.
-Flags and Solutions
-Flag 1: CTF{flag1_sql_injection}
+
+# Flags and Solutions
+
+## Flag 1: CTF{flag1_sql_injection}
 
     Location: /var/www/html/login.php
 
@@ -28,7 +29,7 @@ Flag 1: CTF{flag1_sql_injection}
 
         The application will log you in and display the flag: CTF{flag1_sql_injection}.
 
-Flag 2: CTF{flag2_hidden_directory}
+## Flag 2: CTF{flag2_hidden_directory}
 
     Location: /var/www/html/secret/flag2.txt
 
@@ -50,7 +51,7 @@ Flag 2: CTF{flag2_hidden_directory}
 
         Open the flag2.txt file to retrieve the flag: CTF{flag2_hidden_directory}.
 
-Flag 3: CTF{flag3_file_inclusion}
+## Flag 3: CTF{flag3_file_inclusion}
 
     Location: /var/www/html/flag3.txt
 
@@ -68,7 +69,7 @@ Flag 3: CTF{flag3_file_inclusion}
 
         The application will display the flag: CTF{flag3_file_inclusion}.
 
-Flag 4: CTF{flag4_base64_encoded}
+## Flag 4: CTF{flag4_base64_encoded}
 
     Location: /var/www/html/flag4.txt
 
@@ -90,7 +91,7 @@ Flag 4: CTF{flag4_base64_encoded}
 
         The decoded string will contain the flag: CTF{flag4_base64_encoded}.
 
-Flag 5: CTF{flag5_weak_security_header}
+## Flag 5: CTF{flag5_weak_security_header}
 
     Location: /var/www/html/admin/panel.php
 
@@ -112,7 +113,7 @@ Flag 5: CTF{flag5_weak_security_header}
 
         The flag will be displayed on the admin panel: CTF{flag5_weak_security_header}.
 
-Flag 6: CTF{flag6_weak_password_hash}
+## Flag 6: CTF{flag6_weak_password_hash}
 
     Location: /var/www/html/flag6.txt
 
@@ -143,7 +144,7 @@ Flag 6: CTF{flag6_weak_password_hash}
 
         The application will display the flag: CTF{flag6_weak_password_hash}.
 
-Flag 7: CTF{flag7_command_injection}
+## Flag 7: CTF{flag7_command_injection}
 
     Location: /var/www/html/flag7.txt
 
@@ -161,7 +162,7 @@ Flag 7: CTF{flag7_command_injection}
 
         The application will execute the command and display the flag: CTF{flag7_command_injection}.
 
-Flag 8: CTF{flag8_response_header}
+## Flag 8: CTF{flag8_response_header}
 
     Location: /var/www/html/flag8.txt
 
@@ -181,7 +182,7 @@ Flag 8: CTF{flag8_response_header}
 
         Alternatively, access the flag8.txt file directly: http://ctf_challenge_03.yourdomain.com/flag8.txt.
 
-Flag 9: CTF{flag9_ssti_vulnerability}
+## Flag 9: CTF{flag9_ssti_vulnerability}
 
     Location: /var/www/html/flag9.txt
 
@@ -203,7 +204,7 @@ Flag 9: CTF{flag9_ssti_vulnerability}
 
         The application will display the flag: CTF{flag9_ssti_vulnerability}.
 
-Flag 10: CTF{flag10_jwt_token}
+## Flag 10: CTF{flag10_jwt_token}
 
     Location: /var/www/html/flag10.txt
 
@@ -223,17 +224,25 @@ Flag 10: CTF{flag10_jwt_token}
 
         Retrieve the flag from flag10.txt: CTF{flag10_jwt_token}.
 
-Summary of Flags
+# Summary of Flags
 Flag	Vulnerability	Location	Hint
-CTF{flag1_sql_injection}	SQL Injection	/var/www/html/login.php	"The login page is vulnerable to SQL Injection. Can you bypass authentication to retrieve the flag?"
-CTF{flag2_hidden_directory}	Directory Traversal	/var/www/html/secret/flag2.txt	"Some directories are hidden. Can you find the one that holds the flag?"
-CTF{flag3_file_inclusion}	Local File Inclusion	/var/www/html/flag3.txt	"The search feature is acting strange. Can you exploit it to read sensitive files?"
-CTF{flag4_base64_encoded}	Base64 Encoding	/var/www/html/flag4.txt	"Something in the page source looks encoded. Can you decode it?"
-CTF{flag5_weak_security_header}	Misconfigured Security Headers	/var/www/html/admin/panel.php	"The admin panel has weak security headers. Can you exploit them to access the panel?"
-CTF{flag6_weak_password_hash}	Weak Password Hash	/var/www/html/flag6.txt	"A debug page has leaked a user's password hash. Can you crack it and log in to retrieve the flag?"
-CTF{flag7_command_injection}	Command Injection	/var/www/html/flag7.txt	"The admin panel has a command execution feature. Can you exploit it to retrieve the flag?"
-CTF{flag8_response_header}	Response Header Manipulation	/var/www/html/flag8.txt	"The server's response headers contain a hidden clue. Can you find it?"
-CTF{flag9_ssti_vulnerability}	Server-Side Template Injection	/var/www/html/flag9.txt	"The server is using a template engine. Can you inject malicious code?"
-CTF{flag10_jwt_token}	JWT Token Manipulation	/var/www/html/flag10.txt	"A JWT token is being used for authentication. Can you decode and exploit it?"
 
-This revised guide provides a comprehensive roadmap for obtaining all 10 flags in The Phantom App CTF Challenge. Each step is designed to help competitors understand and exploit the vulnerabilities effectively
+CTF{flag1_sql_injection}	SQL Injection	/var/www/html/login.php	"The login page is vulnerable to SQL Injection. Can you bypass authentication to retrieve the flag?"
+
+CTF{flag2_hidden_directory}	Directory Traversal	/var/www/html/secret/flag2.txt	"Some directories are hidden. Can you find the one that holds the flag?"
+
+CTF{flag3_file_inclusion}	Local File Inclusion	/var/www/html/flag3.txt	"The search feature is acting strange. Can you exploit it to read sensitive files?"
+
+CTF{flag4_base64_encoded}	Base64 Encoding	/var/www/html/flag4.txt	"Something in the page source looks encoded. Can you decode it?"
+
+CTF{flag5_weak_security_header}	Misconfigured Security Headers	/var/www/html/admin/panel.php	"The admin panel has weak security headers. Can you exploit them to access the panel?"
+
+CTF{flag6_weak_password_hash}	Weak Password Hash	/var/www/html/flag6.txt	"A debug page has leaked a user's password hash. Can you crack it and log in to retrieve the flag?"
+
+CTF{flag7_command_injection}	Command Injection	/var/www/html/flag7.txt	"The admin panel has a command execution feature. Can you exploit it to retrieve the flag?"
+
+CTF{flag8_response_header}	Response Header Manipulation	/var/www/html/flag8.txt	"The server's response headers contain a hidden clue. Can you find it?"
+
+CTF{flag9_ssti_vulnerability}	Server-Side Template Injection	/var/www/html/flag9.txt	"The server is using a template engine. Can you inject malicious code?"
+
+CTF{flag10_jwt_token}	JWT Token Manipulation	/var/www/html/flag10.txt	"A JWT token is being used for authentication. Can you decode and exploit it?"
