@@ -7,15 +7,6 @@ $users = [
     ],
 ];
 
-// Simulated SQL database (for SQL Injection vulnerability)
-$sql_users = [
-    [
-        'username' => 'admin',
-        'password' => 'password123',
-        'flag' => 'CTF{flag1_sql_injection}',
-    ],
-];
-
 // Handle login form submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
@@ -48,6 +39,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Login</title>
 </head>
 <body>
+    <!-- Add the image here -->
+    <img src="images/logo.png" alt="Phantom App Logo" style="width: 200px; height: auto;">
     <h1>Login</h1>
     <form method="post">
         Username: <input type="text" name="username"><br>
