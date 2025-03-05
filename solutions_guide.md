@@ -3,7 +3,7 @@ Solutions Guide for The Phantom App CTF Challenge. This guide provides step-by-s
 
 ### Story
 
-In a world where cybercrime reigns supreme, a notorious hacking group known as "The Phantoms" has created a vulnerable web application to test the skills of aspiring hackers. This application is hosted on the server ctf_challenge_03.yourdomain.com. Your mission is to infiltrate this server, exploit its weaknesses, and retrieve 10 hidden flags. Each flag represents a piece of encrypted data that can expose the group's secrets and bring them to justice.
+In a world where cybercrime reigns supreme, a notorious hacking group known as "The Phantoms" has created a vulnerable web application to test the skills of aspiring hackers. This application is hosted on the server ctf_challenge_01.yourdomain.com. Your mission is to infiltrate this server, exploit its weaknesses, and retrieve 10 hidden flags. Each flag represents a piece of encrypted data that can expose the group's secrets and bring them to justice.
 
 # Flags and Solutions
 
@@ -17,7 +17,7 @@ In a world where cybercrime reigns supreme, a notorious hacking group known as "
 
 #### Steps:
 
-        Navigate to the login page: http://ctf_challenge_03.yourdomain.com/login.php.
+        Navigate to the login page: http://ctf_challenge_01.yourdomain.com/login.php.
 
         Enter a SQL Injection payload in the username or password field:
 
@@ -41,13 +41,12 @@ In a world where cybercrime reigns supreme, a notorious hacking group known as "
 
         Use a directory brute-forcing tool like gobuster or dirb to find hidden directories:
         bash
-        Copy
-
-        gobuster dir -u http://ctf_challenge_03.yourdomain.com -w /path/to/wordlist.txt
+       
+        gobuster dir -u http://ctf_challenge_01.yourdomain.com -w /path/to/wordlist.txt
 
         Look for a directory named secret.
 
-        Access the directory: http://ctf_challenge_03.yourdomain.com/secret/.
+        Access the directory: http://ctf_challenge_01.yourdomain.com/secret/.
 
         Open the flag2.txt file to retrieve the flag: CTF{flag2_hidden_directory}.
 
@@ -61,11 +60,11 @@ In a world where cybercrime reigns supreme, a notorious hacking group known as "
 
 #### Steps:
 
-        Navigate to the search page: http://ctf_challenge_03.yourdomain.com/search.php.
+        Navigate to the search page: http://ctf_challenge_01.yourdomain.com/search.php.
 
         Use the file parameter to include the flag3.txt file:
 
-            Example: http://ctf_challenge_03.yourdomain.com/search.php?file=flag3.txt.
+            Example: http://ctf_challenge_01.yourdomain.com/search.php?file=flag3.txt.
 
         The application will display the flag: CTF{flag3_file_inclusion}.
 
@@ -79,14 +78,13 @@ In a world where cybercrime reigns supreme, a notorious hacking group known as "
 
 #### Steps:
 
-        View the page source of the homepage: http://ctf_challenge_03.yourdomain.com.
+        View the page source of the homepage: http://ctf_challenge_01.yourdomain.com.
 
         Look for a base64-encoded string in the HTML comments or JavaScript.
 
         Decode the string using a base64 decoder:
         bash
-        Copy
-
+        
         echo "base64_encoded_string" | base64 --decode
 
         The decoded string will contain the flag: CTF{flag4_base64_encoded}.
@@ -105,7 +103,7 @@ In a world where cybercrime reigns supreme, a notorious hacking group known as "
         bash
         Copy
 
-        curl -I http://ctf_challenge_03.yourdomain.com/admin/panel.php
+        curl -I http://ctf_challenge_01.yourdomain.com/admin/panel.php
 
         Look for missing or weak security headers (e.g., Content-Security-Policy, X-Frame-Options).
 
@@ -123,7 +121,7 @@ In a world where cybercrime reigns supreme, a notorious hacking group known as "
 
 #### Steps:
 
-        Access the debug page: http://ctf_challenge_03.yourdomain.com/debug.php.
+        Access the debug page: http://ctf_challenge_01.yourdomain.com/debug.php.
 
         Note the password hash for testuser: 482c811da5d5b4bc6d497ffa98491e38.
 
@@ -154,7 +152,7 @@ In a world where cybercrime reigns supreme, a notorious hacking group known as "
 
 #### Steps:
 
-        Navigate to the admin panel: http://ctf_challenge_03.yourdomain.com/admin/panel.php.
+        Navigate to the admin panel: http://ctf_challenge_01.yourdomain.com/admin/panel.php.
 
         Inject a command into the input field:
 
@@ -176,11 +174,11 @@ In a world where cybercrime reigns supreme, a notorious hacking group known as "
         bash
         Copy
 
-        curl -I http://ctf_challenge_03.yourdomain.com
+        curl -I http://ctf_challenge_01.yourdomain.com
 
         Look for a custom header containing the flag (e.g., X-Flag: CTF{flag8_response_header}).
 
-        Alternatively, access the flag8.txt file directly: http://ctf_challenge_03.yourdomain.com/flag8.txt.
+        Alternatively, access the flag8.txt file directly: http://ctf_challenge_01.yourdomain.com/flag8.txt.
 
 ## Flag 9: CTF{flag9_ssti_vulnerability}
 
@@ -225,7 +223,7 @@ In a world where cybercrime reigns supreme, a notorious hacking group known as "
         Retrieve the flag from flag10.txt: CTF{flag10_jwt_token}.
 
 # Summary of Flags
-Flag	Vulnerability	Location	Hint
+## Flag	            Vulnerability	            Location	                Hint
 
 CTF{flag1_sql_injection}	SQL Injection	/var/www/html/login.php	"The login page is vulnerable to SQL Injection. Can you bypass authentication to retrieve the flag?"
 
