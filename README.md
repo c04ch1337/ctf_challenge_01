@@ -1,7 +1,5 @@
 # CTF Challenge 1: The Phantom App
 
-![Alt Text](web/images/PhantomApp.png)
-
 <div align="center">
   <img src="web/images/PhantomApp.png" alt="Phantom App Logo" width="600">
 </div>
