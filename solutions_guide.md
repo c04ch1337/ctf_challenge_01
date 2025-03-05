@@ -1,7 +1,9 @@
 # The Phantom App: Solutions Guide
 Solutions Guide for The Phantom App CTF Challenge. This guide provides step-by-step instructions for obtaining all 10 flags.
 
-![Alt Text](web/images/PhantomSolutions.png)
+<div align="center">
+  <img src="web/images/PhantomSolutions.png" alt="Phantom App Logo" width="600">
+</div>
 
 ### Story
 
