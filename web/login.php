@@ -36,11 +36,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login</title>
+    <title>Phantom User Login</title>
 </head>
 <body>
     <!-- Add the image here -->
-    <img src="images/logo.png" alt="Phantom App Logo" style="width: 200px; height: auto;">
+    <img src="web/images/PhantomLogin.png" alt="Phantom App Logo" style="width: 200px; height: auto;">
     <h1>Login</h1>
     <form method="post">
         Username: <input type="text" name="username"><br>
