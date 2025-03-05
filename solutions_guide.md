@@ -1,6 +1,8 @@
 # The Phantom App: Solutions Guide
 Solutions Guide for The Phantom App CTF Challenge. This guide provides step-by-step instructions for obtaining all 10 flags.
 
+![Alt Text](web/images/PhantomApp.png)
+
 ### Story
 
 In a world where cybercrime reigns supreme, a notorious hacking group known as "The Phantoms" has created a vulnerable web application to test the skills of aspiring hackers. This application is hosted on the server ctf_challenge_01.yourdomain.com. Your mission is to infiltrate this server, exploit its weaknesses, and retrieve 10 hidden flags. Each flag represents a piece of encrypted data that can expose the group's secrets and bring them to justice.
