@@ -1,5 +1,7 @@
 <?php
 echo "<h1>Debug Page</h1>";
+ <!-- Add the image here -->
+    <img src="web/images/PhantomSolutions.png" alt="Phantom Debug" style="width: 200px; height: auto;">
 echo "<p>This page is for debugging purposes only. Do not expose in production!</p>";
 
 // Simulated user data
