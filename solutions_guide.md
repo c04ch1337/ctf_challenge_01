@@ -13,9 +13,9 @@ In a world where cybercrime reigns supreme, a notorious hacking group known as "
 
     Vulnerability: SQL Injection
 
-    Hint: "The login page is vulnerable to SQL Injection. Can you bypass authentication to retrieve the flag?"
+#### Hint: "The login page is vulnerable to SQL Injection. Can you bypass authentication to retrieve the flag?"
 
-    Steps:
+#### Steps:
 
         Navigate to the login page: http://ctf_challenge_03.yourdomain.com/login.php.
 
@@ -35,9 +35,9 @@ In a world where cybercrime reigns supreme, a notorious hacking group known as "
 
     Vulnerability: Directory Traversal
 
-    Hint: "Some directories are hidden. Can you find the one that holds the flag?"
+#### Hint: "Some directories are hidden. Can you find the one that holds the flag?"
 
-    Steps:
+#### Steps:
 
         Use a directory brute-forcing tool like gobuster or dirb to find hidden directories:
         bash
@@ -57,9 +57,9 @@ In a world where cybercrime reigns supreme, a notorious hacking group known as "
 
     Vulnerability: Local File Inclusion (LFI)
 
-    Hint: "The search feature is acting strange. Can you exploit it to read sensitive files?"
+#### Hint: "The search feature is acting strange. Can you exploit it to read sensitive files?"
 
-    Steps:
+#### Steps:
 
         Navigate to the search page: http://ctf_challenge_03.yourdomain.com/search.php.
 
@@ -75,9 +75,9 @@ In a world where cybercrime reigns supreme, a notorious hacking group known as "
 
     Vulnerability: Base64 Encoding
 
-    Hint: "Something in the page source looks encoded. Can you decode it?"
+#### Hint: "Something in the page source looks encoded. Can you decode it?"
 
-    Steps:
+#### Steps:
 
         View the page source of the homepage: http://ctf_challenge_03.yourdomain.com.
 
@@ -97,9 +97,9 @@ In a world where cybercrime reigns supreme, a notorious hacking group known as "
 
     Vulnerability: Misconfigured Security Headers
 
-    Hint: "The admin panel has weak security headers. Can you exploit them to access the panel?"
+#### Hint: "The admin panel has weak security headers. Can you exploit them to access the panel?"
 
-    Steps:
+#### Steps:
 
         Use curl or a browser's developer tools to inspect the HTTP headers:
         bash
@@ -119,9 +119,9 @@ In a world where cybercrime reigns supreme, a notorious hacking group known as "
 
     Vulnerability: Weak Password Hash
 
-    Hint: "A debug page has leaked a user's password hash. Can you crack it and log in to retrieve the flag?"
+#### Hint: "A debug page has leaked a user's password hash. Can you crack it and log in to retrieve the flag?"
 
-    Steps:
+#### Steps:
 
         Access the debug page: http://ctf_challenge_03.yourdomain.com/debug.php.
 
@@ -150,9 +150,9 @@ In a world where cybercrime reigns supreme, a notorious hacking group known as "
 
     Vulnerability: Command Injection
 
-    Hint: "The admin panel has a command execution feature. Can you exploit it to retrieve the flag?"
+#### Hint: "The admin panel has a command execution feature. Can you exploit it to retrieve the flag?"
 
-    Steps:
+#### Steps:
 
         Navigate to the admin panel: http://ctf_challenge_03.yourdomain.com/admin/panel.php.
 
@@ -168,9 +168,9 @@ In a world where cybercrime reigns supreme, a notorious hacking group known as "
 
     Vulnerability: Response Header Manipulation
 
-    Hint: "The server's response headers contain a hidden clue. Can you find it?"
+#### Hint: "The server's response headers contain a hidden clue. Can you find it?"
 
-    Steps:
+#### Steps:
 
         Use curl or a browser's developer tools to inspect the HTTP response headers:
         bash
@@ -188,9 +188,9 @@ In a world where cybercrime reigns supreme, a notorious hacking group known as "
 
     Vulnerability: Server-Side Template Injection (SSTI)
 
-    Hint: "The server is using a template engine. Can you inject malicious code?"
+#### Hint: "The server is using a template engine. Can you inject malicious code?"
 
-    Steps:
+#### Steps:
 
         Find a feature that uses templates (e.g., a user profile or search results page).
 
@@ -210,9 +210,9 @@ In a world where cybercrime reigns supreme, a notorious hacking group known as "
 
     Vulnerability: JWT Token Manipulation
 
-    Hint: "A JWT token is being used for authentication. Can you decode and exploit it?"
+#### Hint: "A JWT token is being used for authentication. Can you decode and exploit it?"
 
-    Steps:
+#### Steps:
 
         Log in to the application and capture the JWT token from the browser's developer tools or a proxy like Burp Suite.
 
