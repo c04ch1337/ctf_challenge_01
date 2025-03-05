@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  ctf_01:
+  phantom_app:
     build: .
     ports:
       - "81:80"
